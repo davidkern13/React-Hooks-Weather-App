@@ -16,6 +16,7 @@ const store = initialStore();
 store.dispatch(searchQuery(item.LocalizedName));
 store.dispatch(selectedWeaterItem(item));
 
+console.log('process.env.API_URL', process.env);
 ReactDOM.render(
     <Provider store={store}>
         <App />
