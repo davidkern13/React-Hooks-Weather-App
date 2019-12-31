@@ -1,0 +1,57 @@
+@import "../../App.scss";
+@import '../../style/functions.scss';
+
+/** NAVIGATION BAR */
+nav {
+  @include flex;
+
+  width: 100%;
+  height: 60px;
+  flex: 1 100%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 2px 2px rgba(0,0,0,0.12);
+  align-items: center;
+  padding: 0px 20px;
+  background-color: getColor(nav);
+
+
+  ul {
+
+    @include flex;
+    margin: 0;
+
+    li {
+      @include transition;
+      font-size: 1rem;
+      list-style-type: none;
+      margin: 0px 0px 0px 15px;
+      padding: .5rem .8rem;
+      border-radius: 100px;
+      cursor: pointer;
+      border: 1px solid $main-purple;
+      a {
+        @include capitalize;
+        color: $main-purple;
+        text-decoration: none;
+        font-size: .8rem;
+      }
+      &:hover {
+        background-image: linear-gradient(to right top, #8744f0, #8d48ee, #924dec, #9751eb, #9c56e9);
+
+        > a{
+          color: $main-bg !important;
+        }
+      }
+    }
+  }
+}
+
+.fill-remaining-space {
+  @include space;
+}
+
+.active{
+  > a {
+    color: $main-bg !important;
+  }
+  background-image: linear-gradient(to right top, #8744f0, #8d48ee, #924dec, #9751eb, #9c56e9);
+}

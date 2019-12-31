@@ -1,0 +1,219 @@
+@import "../../App.scss";
+@import '../../style/functions.scss';
+@import '../../style/media-query.scss';
+
+.weather-container{
+  max-width: 992px;
+  width: 100%;
+  background: getColor(secondary);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 5px;
+
+  @include tablet {
+    max-width: 520px;
+  }
+
+  >.current-weather-wrap{
+
+    > .row{
+      @include flex;
+      width: 100%;
+
+      > .flex > .title {
+
+        @include flex;
+
+        > h1 {
+          font-size: 4rem;
+          color: getColor(primary);
+
+          @include tablet {
+            font-size: 1.5rem;
+          }
+
+          @include phone {
+            font-size: 2rem;
+          }
+        }
+
+        @include phone {
+          flex-direction: column;
+        }
+
+      }
+
+      > .flex > .title > .sub-title {
+
+        > p {
+          font-size: 1.5rem;
+          color: getColor(chill);
+
+          @include tablet {
+            font-size: 0.8rem;
+          }
+
+        }
+
+        > .temperature {
+
+          @include flex;
+          margin: 13px 0px 0px 20px;
+
+          >  p {
+            font-size: 3rem;
+            color: getColor(chillest);
+
+            @include tablet {
+              font-size: 1.5rem;
+            }
+
+
+            > span {
+              font-size: 1rem;
+              vertical-align: top;
+              margin: 7px 5px 0px 5px;
+              display: inline-flex;
+              cursor: pointer;
+
+              @include tablet {
+                margin: 0px 5px 0px 5px;
+              }
+
+              @include phone {
+                font-size: 1rem;
+              }
+            }
+          }
+          > img{
+            height: auto;
+            width: 100px;
+
+            @include tablet {
+              width: 30px;
+              height: 20px;
+            }
+          }
+
+          @include tablet {
+            margin: 2px 0px 0px 5px;
+          }
+        }
+      }
+
+      > .container-city-img {
+        border-radius: 70% 30% 76% 24% / 71% 60% 40% 29%;
+        overflow: hidden;
+        width: 100px;
+        height: 100px;
+        margin: 10px 25px 0px 0px;
+
+        @include tablet {
+          width: 75px;
+          height: 50px;
+          margin: 2px 5px 0px 0px;
+        }
+
+        @include phone {
+          margin: 2px 15px 0px 0px;
+        }
+
+        > img{
+          width: auto;
+          height: 100%;
+        }
+      }
+
+      > .container-favorite{
+        > button {
+          transition: all 0.3s linear;
+          font-size: 0.8rem;
+          list-style-type: none;
+          padding: 0.5rem 0.8rem;
+          border-radius: 100px;
+          cursor: pointer;
+          border: none;
+          outline: none;
+          color: #fff;
+          background: getColor(purple);
+
+          &:hover {
+            background:  getColor(gradit);
+          }
+
+          @include tablet {
+            padding: 0.2rem 0.3rem;
+            font-size: 0.6rem;
+          }
+        }
+      }
+
+      > .flex > .wrap-info{
+
+        @include flex;
+        margin: 15px 0px 0px 7px;
+
+        @include phone {
+         flex-direction: column;
+        }
+
+        > p {
+          font-size: 1.2rem;
+          color: getColor(primary);
+          padding: 5px 5px 0px 0px;
+
+          @include tablet {
+            font-size: 0.8rem;
+            padding: 3px 3px 0px 0px;
+          }
+
+          @include phone {
+            font-size: 1.2rem;
+          }
+
+          > span {
+            font-size: 0.8rem;
+            color: getColor(chillest);
+
+            @include tablet {
+              font-size: 0.6rem;
+            }
+
+            @include phone {
+              font-size: 1rem;
+            }
+          }
+        }
+
+        > .day{
+          font-size: 1.5rem;
+          padding: 0px 10px 0px 0px;
+
+          @include tablet {
+            font-size: 0.7rem;
+          }
+
+          @include phone {
+            font-size: 1.5rem;
+          }
+        }
+
+
+        @include tablet {
+          margin: 15px 0px 0px 2px;
+        }
+      }
+
+
+
+    }
+
+    @include flex;
+    flex-direction: column;
+    padding: 20px 20px 20px;
+
+  }
+}
+
+
+/* DARK THEME */
+

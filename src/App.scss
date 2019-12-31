@@ -1,0 +1,127 @@
+@import './style/functions.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* COLORS */
+$main-color: #0E0C0B;
+$main-bg: #f4f6fc;
+$main-purple: #8744f0;
+
+$colors: (
+        bg: #F0F0EE,
+        nav: #212731,
+        base: #343d4b,
+        primary: #ffffff,
+        secondary: #212731,
+        chill: #C7D9EC,
+        chillest: #AEBBCD,
+        purple: #8744f0,
+        gradit: linear-gradient( 135deg, #72EDF2 10%, #5151E5 100%),
+);
+
+$colors-dark: (
+        bg: map-get($colors, secondary),
+        nav: map-get($colors, primary),
+        base: map-get($colors, bg),
+        primary: map-get($colors, base),
+        secondary: map-get($colors, primary),
+        chill: map-get($colors, secondary),
+        chillest: map-get($colors, chillest),
+        purple: map-get($colors, base),
+        gradit: map-get($colors, gradit),
+);
+
+/* For light mode */
+:root {
+  @each $name, $color in $colors {
+    --color-#{$name}: #{$color};
+  }
+}
+
+/* For dark mode */
+body.dark {
+  @each $name, $color in $colors-dark {
+    --color-#{$name}: #{$color};
+  }
+}
+
+
+/* Text */
+
+h1,h2,h3,h4,h5,h6,p {
+  display: block;
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: 0 !important;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin-block-start: 0em !important;
+  margin-block-end: 0em !important;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px !important;
+}
+
+body {
+  background: getColor(base);
+  color: getColor(primary);
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+@mixin center {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin transition {
+  transition:all 0.3s linear;
+}
+
+@mixin flex {
+  display:flex;
+}
+
+@mixin space {
+  flex: auto;
+}
+
+@mixin flex-center {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin capitalize {
+  text-transform: capitalize;
+}
+
+.flex{
+  @include flex;
+  flex-direction: column;
+}
+
+.active-symbol {
+  background: transparent;
+  color: #8744f0 !important;
+  font-weight: 600;
+}
+
+.fill-remaining-space{
+  @include space;
+}

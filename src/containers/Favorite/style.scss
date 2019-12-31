@@ -1,0 +1,121 @@
+@import "../../App.scss";
+@import '../../style/functions.scss';
+@import '../../style/media-query.scss';
+
+.favorite {
+
+  max-width: 992px;
+  width: 100%;
+  padding: 50px 0px;
+
+  > .title-container {
+    margin: 0px 0px 20px 0px;
+
+    > h1 {
+      font-size: 2.2rem;
+      color: getColor(primary);
+      font-weight: 900;
+      @include capitalize;
+
+      @include tablet {
+        text-align: center;
+      }
+    }
+  }
+
+  > .gb-container {
+    @include flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 50px 0px 0px 0px;
+
+    > .container-wrap{
+
+      height: 400px;
+      flex: 1 0 30%;
+      margin: 5px 0px 20px 0px;
+
+      > .wrap{
+        position: relative;
+
+        > .weather-gradient{
+
+          > .content {
+            @include flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            background-position: center;
+            height: 400px;
+            border-radius: 25px;
+            margin: 0px 10px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 20px 20px;
+
+            > div {
+
+              margin: 0px 0px 20px 0px;
+
+              > p{
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: $main-bg;
+              }
+
+              > .city {
+                font-size: 2.5rem;
+                font-weight: 700;
+                color: $main-bg;
+              }
+
+              > .day{
+                font-size: 1rem;
+              }
+            }
+
+            > .other {
+              > p{
+                font-size: 1rem;
+                padding: 0px 0px 5px;
+                color: $main-bg;
+              }
+            }
+
+            > .row {
+              @include flex;
+              flex-direction: row;
+
+              > img {
+                height: auto;
+                width: 100px;
+              }
+
+              > p{
+                font-size: 3rem;
+                font-weight: 700;
+                color: $main-bg;
+              }
+
+              > span {
+                font-size: 1rem;
+                vertical-align: top;
+                margin: 7px 5px 0px 5px;
+                display: inline-flex;
+                cursor: pointer;
+                color: $main-bg;
+              }
+            }
+          }
+        }
+
+
+      }
+    }
+
+  }
+
+
+}

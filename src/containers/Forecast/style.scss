@@ -1,0 +1,106 @@
+@import "../../App.scss";
+@import '../../style/functions.scss';
+@import '../../style/media-query.scss';
+
+.daily-container{
+  max-width: 992px;
+  width: 100%;
+
+  @include tablet {
+    max-width: 520px;
+  }
+
+  @include phone {
+    max-width: 480px;
+    padding: 0px 15px;
+  }
+
+  .title-wrap{
+    margin: 30px 0px 30px 0px;
+
+    >p{
+      font-size: 1rem;
+      color: getColor(chill);
+    }
+  }
+  .title-wrap-top {
+    >p{
+      font-size: 1.5rem;
+    }
+  }
+
+
+  .daily-wrap {
+    > ul {
+      display: flex;
+
+      @include tablet {
+        @include flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+
+      > li{
+        @include transition;
+
+        flex: 1 1 20%;
+        background: getColor(secondary);
+        height: 200px;
+        color: getColor(primary);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        margin: 0px 5px;
+        border-radius: 5px;
+        text-align: center;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        transform: scale(1);
+
+        &:hover{
+          transform: scale(1.05);
+          color: getColor(chillest);
+        }
+
+        @include tablet {
+          flex: 1 0 30%;
+          margin: 5px 5px 20px 5px;
+        }
+
+        @include phone {
+          flex: 1 0 100%;
+          padding: 0px 10px;
+          margin: 5px 0px 20px 0px;
+        }
+
+        > .other-info{
+          > .temp {
+
+            font-size: 1.3rem;
+            font-weight: 600;
+
+            > span{
+              font-size: 1.2rem;
+            }
+          }
+          > .day {
+            font-size: 1.2rem;
+            font-weight: 500;
+          }
+          > .date {
+            font-size: 0.8rem;
+            font-weight: 400;
+            padding: 5px 0;
+          }
+        }
+
+        &:first-child {
+          background: getColor(gradit);
+          color: #fff;
+        }
+      }
+    }
+  }
+
+}
+

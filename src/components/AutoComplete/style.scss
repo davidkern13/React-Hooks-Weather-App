@@ -1,0 +1,56 @@
+@import "../../App.scss";
+
+.autocomplete-container{
+  max-width: 992px;
+  width: 100%;
+  margin: 5px 0px 0px 0px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1000;
+  background-color: rgba(255,255,255,0.99);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: left 12px top 10px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+  > .wrap-title{
+    padding: 15px;
+
+    > p {
+      color: #0E0C0B;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+
+  > ul {
+    padding: 10px 0px;
+
+    > li {
+
+      @include transition;
+      padding: 7px 10px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #eee;
+        >p{
+          color: #8744f0;
+        }
+      }
+
+      >p{
+
+        color: #050311;
+        font-size: 1rem;
+
+        >span{
+          color: #4A525E;
+          font-size: 0.8rem;
+          margin: 0px 10px 0px 0px;
+        }
+      }
+    }
+  }
+
+}
