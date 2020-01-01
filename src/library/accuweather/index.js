@@ -1,5 +1,5 @@
-const keyError = 'egWpYnrRUAl4IrWG3WbWS7tN92JbyruB';
-const key = '4UIGWwk0T2orsSuIt32xDAA1q9CC8GFF';
+const keyError = '';
+const key = '';
 
 export const geoposition = (lat, long) => {
     return 'https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=' + key + '&q=' + lat + '%2C' + long
