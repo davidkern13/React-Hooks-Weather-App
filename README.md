@@ -1,4 +1,4 @@
-# Weather React App
+# Weather React Hooks App
 
 # Home page
 
