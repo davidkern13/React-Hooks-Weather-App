@@ -1,5 +1,7 @@
 # Weather React Hooks App
 
+**Set API KEY for check it!**
+
 # Home page
 
 ![alt text](https://www.imageupload.net/upload-image/2019/12/31/screencapture-localhost-3000-2019-12-31-18_51_45.png)
